@@ -1,129 +1,432 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoop Science | Baloncesto y Rendimiento</title>
-    <style>
-        :root {
-            --bg-principal: #0d0d0d;
-            --bg-tarjetas: #1a1a1a;
-            --acento: #ff5722; /* Naranja basketball */
-            --texto: #ffffff;
-            --texto-secundario: #a6a6a6;
-        }
-
-        body {
-            margin: 0;
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-principal);
-            color: var(--texto);
-            line-height: 1.6;
-        }
-
-        header {
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #262626;
-        }
-
-        h1 {
-            color: var(--acento);
-            margin: 0;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--texto-secundario);
-            max-width: 600px;
-            margin: 10px auto 0;
-        }
-
-        .contenedor {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .tarjeta {
-            background-color: var(--bg-tarjetas);
-            border-radius: 8px;
-            padding: 25px;
-            border: 1px solid #262626;
-            transition: transform 0.2s;
-        }
-
-        .tarjeta:hover {
-            transform: translateY(-5px);
-            border-color: var(--acento);
-        }
-
-        .tarjeta h3 {
-            margin-top: 0;
-            color: var(--acento);
-            font-size: 1.4rem;
-        }
-
-        .tarjeta p {
-            color: var(--texto-secundario);
-            font-size: 0.95rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #404040;
-            font-size: 0.85rem;
-            border-top: 1px solid #262626;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIMSHOT — Rendimiento, Ciencia y Leyendas del Basketball</title>
+  <!-- Hoja de estilos global -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <header>
-        <h1>Hoop Science</h1>
-    </header>
+  <!-- ====================================================
+       NAVBAR — Navegación principal
+       Funciona en ambas páginas (index + biomecanica)
+       ==================================================== -->
+  <nav class="navbar">
+    <div class="container navbar__inner">
 
-    <section class="hero">
-        <h2>Domina la Cancha</h2>
-        <p>Análisis técnico, biomecánica del salto vertical y optimización de rendimiento para jugadores de baloncesto.</p>
-    </section>
+      <!-- Logo de la marca -->
+      <a href="index.html" class="navbar__logo">
+        RIM<span>SHOT</span>
+      </a>
 
-    <main class="contenedor">
-        <div class="grid">
-            <div class="tarjeta">
-                <h3>01. Biomecánica del Salto</h3>
-                <p>La clave para elevar tu juego está en la triple extensión (tobillos, rodillas y cadera) y el ciclo de estiramiento-acortamiento muscular. Entrena la fuerza explosiva.</p>
-            </div>
-            <div class="tarjeta">
-                <h3>02. Estabilidad & Tracción</h3>
-                <p>Análisis de compuestos de suela en canchas limpias vs. exteriores. El impacto del patrón de espiga en cortes laterales y cambios de ritmo agresivos.</p>
-            </div>
-            <div class="tarjeta">
-                <h3>03. Control y Flujo</h3>
-                <p>Optimización del manejo de balón a través del centro de masa bajo. La física detrás del crossover eficiente.</p>
-            </div>
+      <!-- Botón hamburguesa visible solo en móvil -->
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Links de navegación (se ocultan en móvil hasta presionar el toggle) -->
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="biomecanica.html">Biomecánica</a></li>
+        <li><a href="#leyendas">Leyendas</a></li>
+        <li><a href="#records">Records</a></li>
+        <li><a href="biomecanica.html" class="navbar__cta">Ver Ciencia</a></li>
+      </ul>
+
+    </div>
+  </nav>
+  <!-- FIN NAVBAR -->
+
+
+  <!-- ====================================================
+       HERO SECTION — Banner principal
+       Imagen de fondo + título + estadísticas rápidas
+       ==================================================== -->
+  <section class="hero">
+
+    <!-- Imagen de fondo (Unsplash: cancha de basketball aérea) -->
+    <img
+      class="hero__bg"
+      src="https://images.unsplash.com/photo-1546519638399-1274d2e67e33?w=1600&q=85&auto=format&fit=crop"
+      alt="Cancha de basketball vista desde arriba"
+      loading="eager"
+    />
+
+    <!-- Número fantasma decorativo tipo jersey (firma visual) -->
+    <div class="hero__ghost-number" aria-hidden="true">23</div>
+
+    <!-- Contenido textual del hero -->
+    <div class="container hero__content">
+
+      <p class="hero__eyebrow">Temporada 2024 — 25</p>
+
+      <h1 class="hero__title">
+        EL JUEGO <em>NO</em><br>PERDONA<br>LA FÍSICA.
+      </h1>
+
+      <p class="hero__desc">
+        Rendimiento, biomecánica y los récords que definen
+        la historia del basketball. Datos reales, ciencia detrás
+        del aro.
+      </p>
+
+      <!-- Botones de acción -->
+      <div class="hero__actions">
+        <a href="#leyendas" class="btn btn--primary">
+          Ver Leyendas
+        </a>
+        <a href="biomecanica.html" class="btn btn--ghost">
+          Ciencia del Juego →
+        </a>
+      </div>
+
+      <!-- Estadísticas rápidas del juego -->
+      <div class="hero__stats">
+        <div>
+          <div class="hero__stat-value">4.8M</div>
+          <div class="hero__stat-label">Seguidores NBA</div>
         </div>
-    </main>
+        <div>
+          <div class="hero__stat-value">30</div>
+          <div class="hero__stat-label">Franquicias</div>
+        </div>
+        <div>
+          <div class="hero__stat-value">82</div>
+          <div class="hero__stat-label">Juegos / Temporada</div>
+        </div>
+      </div>
 
-    <footer>
-        <p>&copy; 2026 Hoop Science. Creado desde cero.</p>
-    </footer>
+    </div>
+  </section>
+  <!-- FIN HERO -->
+
+
+  <!-- ====================================================
+       SECCIÓN LEYENDAS / MVP
+       Grid de tarjetas con imágenes de Unsplash
+       ==================================================== -->
+  <section class="legends" id="leyendas">
+    <div class="container">
+
+      <!-- Encabezado de sección -->
+      <div class="legends__header">
+        <div>
+          <span class="section-label">Inmortales del Juego</span>
+          <h2 class="section-title">LAS LEYENDAS</h2>
+          <span class="divider"></span>
+        </div>
+        <a href="#records" class="btn btn--ghost" style="margin-bottom:3.5rem">
+          Ver Records →
+        </a>
+      </div>
+
+      <!-- Grid de tarjetas: 4 columnas en desktop -->
+      <div class="legends__grid">
+
+        <!-- ---- TARJETA DESTACADA (ocupa 2 columnas) ---- -->
+        <article class="card card--featured">
+          <div class="card__img-wrap">
+            <!-- Imagen de jugador saltando (Unsplash) -->
+            <img
+              src="https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=900&q=85&auto=format&fit=crop"
+              alt="Jugador de basketball saltando"
+              loading="lazy"
+            />
+            <div class="card__img-overlay"></div>
+          </div>
+          <!-- Badge de posición -->
+          <span class="card__badge">Base</span>
+          <div class="card__body">
+            <div class="card__number">#23</div>
+            <h3 class="card__name">Michael Jordan</h3>
+            <p class="card__team">Chicago Bulls · 1984 – 1998</p>
+            <!-- Estadísticas resumidas -->
+            <div class="card__stats">
+              <div class="card__stat">
+                <div class="card__stat-val">30.1</div>
+                <div class="card__stat-key">PPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">6.2</div>
+                <div class="card__stat-key">RPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">5.3</div>
+                <div class="card__stat-key">APG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">6</div>
+                <div class="card__stat-key">Anillos</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- TARJETA 2 ---- -->
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1519861531473-9200262188bf?w=600&q=85&auto=format&fit=crop&crop=top"
+              alt="Jugador de basketball en cancha"
+              loading="lazy"
+            />
+            <div class="card__img-overlay"></div>
+          </div>
+          <span class="card__badge">Ala-Pivot</span>
+          <div class="card__body">
+            <div class="card__number">#6 / #23</div>
+            <h3 class="card__name">LeBron James</h3>
+            <p class="card__team">LAL / MIA / CLE · 2003 – Hoy</p>
+            <div class="card__stats">
+              <div class="card__stat">
+                <div class="card__stat-val">27.1</div>
+                <div class="card__stat-key">PPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">7.5</div>
+                <div class="card__stat-key">RPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">7.4</div>
+                <div class="card__stat-key">APG</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- TARJETA 3 ---- -->
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=85&auto=format&fit=crop&crop=top"
+              alt="Jugador dribbleando en cancha"
+              loading="lazy"
+            />
+            <div class="card__img-overlay"></div>
+          </div>
+          <span class="card__badge">Escolta</span>
+          <div class="card__body">
+            <div class="card__number">#8 / #24</div>
+            <h3 class="card__name">Kobe Bryant</h3>
+            <p class="card__team">Los Angeles Lakers · 1996 – 2016</p>
+            <div class="card__stats">
+              <div class="card__stat">
+                <div class="card__stat-val">25.0</div>
+                <div class="card__stat-key">PPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">5.2</div>
+                <div class="card__stat-key">RPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">4.7</div>
+                <div class="card__stat-key">APG</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- TARJETA 4 ---- -->
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85&auto=format&fit=crop"
+              alt="Basketball rebotando en tablero"
+              loading="lazy"
+            />
+            <div class="card__img-overlay"></div>
+          </div>
+          <span class="card__badge">Pivot</span>
+          <div class="card__body">
+            <div class="card__number">#13</div>
+            <h3 class="card__name">Wilt Chamberlain</h3>
+            <p class="card__team">PHI / LAL · 1959 – 1973</p>
+            <div class="card__stats">
+              <div class="card__stat">
+                <div class="card__stat-val">30.1</div>
+                <div class="card__stat-key">PPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">22.9</div>
+                <div class="card__stat-key">RPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">100</div>
+                <div class="card__stat-key">Record Pts</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ---- TARJETA 5 ---- -->
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?w=600&q=85&auto=format&fit=crop"
+              alt="Basketball de cerca bajo las luces del estadio"
+              loading="lazy"
+            />
+            <div class="card__img-overlay"></div>
+          </div>
+          <span class="card__badge">Base</span>
+          <div class="card__body">
+            <div class="card__number">#30</div>
+            <h3 class="card__name">Stephen Curry</h3>
+            <p class="card__team">Golden State Warriors · 2009 – Hoy</p>
+            <div class="card__stats">
+              <div class="card__stat">
+                <div class="card__stat-val">24.8</div>
+                <div class="card__stat-key">PPG</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">3,747</div>
+                <div class="card__stat-key">3P Career</div>
+              </div>
+              <div class="card__stat">
+                <div class="card__stat-val">4</div>
+                <div class="card__stat-key">Anillos</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- FIN grid de leyendas -->
+
+    </div>
+  </section>
+  <!-- FIN SECCIÓN LEYENDAS -->
+
+
+  <!-- ====================================================
+       SECCIÓN RECORDS HISTÓRICOS
+       Cifras impactantes con barra lateral naranja
+       ==================================================== -->
+  <section class="records" id="records">
+    <div class="container">
+
+      <span class="section-label">Números que Definen la Historia</span>
+      <h2 class="section-title">RECORDS<br>ABSOLUTOS</h2>
+      <span class="divider"></span>
+
+      <!-- Grid de 3 columnas con los records más icónicos -->
+      <div class="records__grid">
+
+        <div class="record-item">
+          <div class="record-item__value">100</div>
+          <div class="record-item__desc">Puntos en un solo juego</div>
+          <div class="record-item__name">Wilt Chamberlain — 1962</div>
+        </div>
+
+        <div class="record-item">
+          <div class="record-item__value">38,652</div>
+          <div class="record-item__desc">Puntos en carrera (NBA)</div>
+          <div class="record-item__name">LeBron James — 2023</div>
+        </div>
+
+        <div class="record-item">
+          <div class="record-item__value">3,747</div>
+          <div class="record-item__desc">Triples anotados en carrera</div>
+          <div class="record-item__name">Stephen Curry — Vigente</div>
+        </div>
+
+        <div class="record-item">
+          <div class="record-item__value">23,924</div>
+          <div class="record-item__desc">Rebotes en carrera</div>
+          <div class="record-item__name">Wilt Chamberlain</div>
+        </div>
+
+        <div class="record-item">
+          <div class="record-item__value">15,806</div>
+          <div class="record-item__desc">Asistencias en carrera</div>
+          <div class="record-item__name">John Stockton</div>
+        </div>
+
+        <div class="record-item">
+          <div class="record-item__value">72 – 10</div>
+          <div class="record-item__desc">Mejor récord de temporada</div>
+          <div class="record-item__name">Chicago Bulls — 1995/96</div>
+        </div>
+
+      </div>
+      <!-- FIN grid de records -->
+
+    </div>
+  </section>
+  <!-- FIN SECCIÓN RECORDS -->
+
+
+  <!-- ====================================================
+       BANNER CTA — Llamada a la acción hacia Biomecánica
+       ==================================================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-banner__title">¿QUIERES ENTENDER<br>LA CIENCIA DETRÁS?</h2>
+      <p class="cta-banner__sub">
+        Biomecánica del salto, fuerza reactiva y las zapatillas que lo hacen posible.
+      </p>
+      <a href="biomecanica.html" class="btn btn--primary">
+        Explorar Biomecánica →
+      </a>
+    </div>
+  </section>
+  <!-- FIN BANNER CTA -->
+
+
+  <!-- ====================================================
+       FOOTER
+       ==================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div>
+        <div class="footer__logo">RIM<span>SHOT</span></div>
+        <p class="footer__tagline">Rendimiento · Records · Ciencia del Juego</p>
+      </div>
+
+      <nav class="footer__links">
+        <a href="index.html">Inicio</a>
+        <a href="biomecanica.html">Biomecánica</a>
+        <a href="#leyendas">Leyendas</a>
+        <a href="#records">Records</a>
+      </nav>
+
+    </div>
+
+    <div class="container">
+      <p class="footer__copy">
+        © 2025 RIMSHOT — Proyecto educativo sobre Basketball. Imágenes: Unsplash (licencia libre).
+      </p>
+    </div>
+  </footer>
+  <!-- FIN FOOTER -->
+
+
+  <!-- ====================================================
+       JAVASCRIPT — Solo el toggle del menú móvil
+       Sin frameworks, puro JS nativo
+       ==================================================== -->
+  <script>
+    // Selecciona el botón hamburguesa y la lista de links
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    // Al hacer click en el botón, agrega/quita la clase "open"
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Cierra el menú si el usuario hace click en cualquier link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 </html>

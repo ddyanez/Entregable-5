@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biomecánica del Salto — RIMSHOT</title>
+  <!-- Hoja de estilos global (la misma que index.html) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       NAVBAR — Idéntica a index.html, con "Biomecánica" activo
+       ==================================================== -->
+  <nav class="navbar">
+    <div class="container navbar__inner">
+
+      <a href="index.html" class="navbar__logo">
+        RIM<span>SHOT</span>
+      </a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="biomecanica.html" class="active">Biomecánica</a></li>
+        <li><a href="index.html#leyendas">Leyendas</a></li>
+        <li><a href="index.html#records">Records</a></li>
+        <li><a href="biomecanica.html" class="navbar__cta">Ver Ciencia</a></li>
+      </ul>
+
+    </div>
+  </nav>
+  <!-- FIN NAVBAR -->
+
+
+  <!-- ====================================================
+       PAGE HERO — Banner interno de la página
+       ==================================================== -->
+  <section class="page-hero">
+
+    <!-- Imagen de fondo (Unsplash: jugador en suspensión / salto) -->
+    <img
+      class="page-hero__bg"
+      src="https://images.unsplash.com/photo-1518614368389-7b0da4e3c7ea?w=1600&q=85&auto=format&fit=crop"
+      alt="Jugador de basketball en el aire durante un salto"
+      loading="eager"
+    />
+
+    <div class="container page-hero__content">
+      <span class="section-label">Física Aplicada al Juego</span>
+      <h1 class="page-hero__title">
+        LA CIENCIA <span>DEL SALTO</span>
+      </h1>
+      <p class="page-hero__sub">
+        Cada despegue es un problema de física resuelto en menos de medio segundo:
+        fuerza, masa, tiempo de contacto y energía elástica trabajando juntos.
+      </p>
+    </div>
+
+  </section>
+  <!-- FIN PAGE HERO -->
+
+
+  <!-- ====================================================
+       SECCIÓN CIENCIA DEL SALTO
+       Columna de imagen sticky + tarjetas de conceptos
+       ==================================================== -->
+  <section class="science">
+    <div class="container">
+
+      <span class="section-label">Biomecánica del Movimiento</span>
+      <h2 class="section-title">ANATOMÍA<br>DE UN SALTO</h2>
+      <span class="divider"></span>
+
+      <div class="science__layout">
+
+        <!-- ---- Columna de imagen (se queda fija al hacer scroll) ---- -->
+        <div class="science__img-col">
+          <img
+            class="science__main-img"
+            src="https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?w=900&q=85&auto=format&fit=crop"
+            alt="Jugador de basketball en el momento del despegue"
+            loading="lazy"
+          />
+          <p class="science__caption">
+            Fase de despegue — el cuerpo convierte fuerza horizontal y vertical en altura
+          </p>
+        </div>
+
+        <!-- ---- Columna de tarjetas de conceptos ---- -->
+        <div class="science__cards">
+
+          <article class="concept-card">
+            <div class="concept-card__icon">⚡</div>
+            <h3 class="concept-card__title">Fuerza Reactiva del Suelo</h3>
+            <p class="concept-card__text">
+              Al flexionar rodillas y caderas antes de saltar, el jugador estira los
+              tendones y músculos como un resorte biológico. Esa energía elástica
+              almacenada se libera en el ciclo de estiramiento-acortamiento (CEA),
+              permitiendo aplicar más fuerza contra el suelo en menos tiempo del que
+              el músculo podría generar por sí solo desde el reposo.
+            </p>
+            <span class="concept-card__metric">2.5 – 3.5x el peso corporal en fuerza de reacción</span>
+          </article>
+
+          <article class="concept-card">
+            <div class="concept-card__icon">📐</div>
+            <h3 class="concept-card__title">Ángulo de Despegue</h3>
+            <p class="concept-card__text">
+              La altura máxima de un salto vertical puro se alcanza cuando casi toda
+              la fuerza se dirige hacia abajo, en un ángulo cercano a los 90°
+              respecto al suelo. Pequeñas desviaciones —por compensar el equilibrio
+              o preparar un tiro— reducen significativamente la altura útil del salto.
+            </p>
+            <span class="concept-card__metric">~85°–90° = ángulo óptimo de despegue</span>
+          </article>
+
+          <article class="concept-card">
+            <div class="concept-card__icon">⏱️</div>
+            <h3 class="concept-card__title">Tiempo de Contacto</h3>
+            <p class="concept-card__text">
+              Entre más corto sea el tiempo que el pie pasa en contacto con el piso
+              durante el impulso, mayor es la potencia generada por unidad de tiempo.
+              Los saltadores de élite minimizan ese contacto sin sacrificar la
+              profundidad de flexión necesaria para acumular fuerza elástica.
+            </p>
+            <span class="concept-card__metric">200–250 ms en saltadores de élite</span>
+          </article>
+
+          <article class="concept-card">
+            <div class="concept-card__icon">🦵</div>
+            <h3 class="concept-card__title">Cadena de Extensión Triple</h3>
+            <p class="concept-card__text">
+              El salto vertical no depende solo de las piernas: es una secuencia
+              coordinada de extensión de tobillo, rodilla y cadera, conocida como
+              "triple extensión". Cuando esta cadena se activa en el orden y el
+              momento correctos, la fuerza generada se transmite de forma eficiente
+              hasta la punta del pie.
+            </p>
+            <span class="concept-card__metric">Tobillo → Rodilla → Cadera</span>
+          </article>
+
+          <article class="concept-card">
+            <div class="concept-card__icon">🧠</div>
+            <h3 class="concept-card__title">Activación Neuromuscular</h3>
+            <p class="concept-card__text">
+              Antes del despegue, el sistema nervioso "pre-activa" los músculos de
+              la pierna en los milisegundos previos al contacto con el suelo,
+              preparándolos para una contracción más fuerte y rápida. Este reflejo,
+              entrenable con ejercicios pliométricos, es parte de por qué el salto
+              vertical mejora con entrenamiento específico y no solo con fuerza bruta.
+            </p>
+            <span class="concept-card__metric">Pliometría = entrenamiento clave del reflejo</span>
+          </article>
+
+        </div>
+        <!-- FIN columna de tarjetas -->
+
+      </div>
+      <!-- FIN science__layout -->
+
+    </div>
+  </section>
+  <!-- FIN SECCIÓN CIENCIA DEL SALTO -->
+
+
+  <!-- ====================================================
+       GALERÍA DE ZAPATILLAS
+       Calzado diseñado para optimizar la biomecánica del salto
+       ==================================================== -->
+  <section class="sneakers">
+    <div class="container">
+
+      <span class="section-label">Ingeniería en los Pies</span>
+      <h2 class="section-title">ZAPATILLAS<br>Y RENDIMIENTO</h2>
+      <span class="divider"></span>
+
+      <div class="sneakers__grid">
+
+        <!-- ---- ZAPATILLA DESTACADA (ocupa 2 columnas) ---- -->
+        <article class="sneaker-card">
+          <img
+            class="sneaker-card__img"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85&auto=format&fit=crop"
+            alt="Zapatilla deportiva de basketball de cerca"
+            loading="lazy"
+          />
+          <div class="sneaker-card__info">
+            <h3 class="sneaker-card__name">Amortiguación de Espuma Reactiva</h3>
+            <p class="sneaker-card__tech">Devuelve hasta 80% de la energía de impacto</p>
+          </div>
+        </article>
+
+        <!-- ---- ZAPATILLA 2 ---- -->
+        <article class="sneaker-card">
+          <img
+            class="sneaker-card__img"
+            src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&q=85&auto=format&fit=crop"
+            alt="Zapatilla deportiva blanca sobre fondo oscuro"
+            loading="lazy"
+          />
+          <div class="sneaker-card__info">
+            <h3 class="sneaker-card__name">Placa de Torsión</h3>
+            <p class="sneaker-card__tech">Estabilidad lateral en cambios de dirección</p>
+          </div>
+        </article>
+
+        <!-- ---- ZAPATILLA 3 ---- -->
+        <article class="sneaker-card">
+          <img
+            class="sneaker-card__img"
+            src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=85&auto=format&fit=crop"
+            alt="Zapatilla deportiva de basketball en cancha"
+            loading="lazy"
+          />
+          <div class="sneaker-card__info">
+            <h3 class="sneaker-card__name">Suela de Tracción Multidireccional</h3>
+            <p class="sneaker-card__tech">Patrón de agarre para frenadas explosivas</p>
+          </div>
+        </article>
+
+      </div>
+      <!-- FIN grid de zapatillas -->
+
+    </div>
+  </section>
+  <!-- FIN GALERÍA DE ZAPATILLAS -->
+
+
+  <!-- ====================================================
+       TABLA DE DATOS — Specs biomecánicas comparativas
+       ==================================================== -->
+  <section class="data-section">
+    <div class="container">
+
+      <span class="section-label">Datos Comparativos</span>
+      <h2 class="section-title">MÉTRICAS<br>DEL SALTO</h2>
+      <span class="divider"></span>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Métrica</th>
+            <th>Jugador Promedio</th>
+            <th>Jugador de Élite (NBA)</th>
+            <th>Contexto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Salto vertical sin impulso</td>
+            <td>40 – 50 cm</td>
+            <td>70 – 90 cm</td>
+            <td>Medido desde reposo, sin carrera previa</td>
+          </tr>
+          <tr>
+            <td>Salto vertical con impulso</td>
+            <td>50 – 60 cm</td>
+            <td>85 – 110 cm</td>
+            <td>Incluye energía cinética de la carrera de aproximación</td>
+          </tr>
+          <tr>
+            <td>Fuerza de reacción al suelo</td>
+            <td>~2x peso corporal</td>
+            <td>2.5 – 3.5x peso corporal</td>
+            <td>Pico de fuerza durante el despegue</td>
+          </tr>
+          <tr>
+            <td>Tiempo de contacto en el impulso</td>
+            <td>300 – 400 ms</td>
+            <td>200 – 250 ms</td>
+            <td>Menor tiempo = mayor potencia generada</td>
+          </tr>
+          <tr>
+            <td>Altura de alcance en el aro (dunk)</td>
+            <td>No aplica</td>
+            <td>3.05 m+ (altura del aro)</td>
+            <td>Combina estatura, envergadura y salto vertical</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </section>
+  <!-- FIN TABLA DE DATOS -->
+
+
+  <!-- ====================================================
+       BANNER CTA — Regresa a la página principal
+       ==================================================== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-banner__title">¿LISTO PARA VER<br>A LAS LEYENDAS?</h2>
+      <p class="cta-banner__sub">
+        Estadísticas, récords y la historia de los jugadores que cambiaron el juego.
+      </p>
+      <a href="index.html#leyendas" class="btn btn--primary">
+        Ver Leyendas →
+      </a>
+    </div>
+  </section>
+  <!-- FIN BANNER CTA -->
+
+
+  <!-- ====================================================
+       FOOTER — Idéntico a index.html
+       ==================================================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <div>
+        <div class="footer__logo">RIM<span>SHOT</span></div>
+        <p class="footer__tagline">Rendimiento · Records · Ciencia del Juego</p>
+      </div>
+
+      <nav class="footer__links">
+        <a href="index.html">Inicio</a>
+        <a href="biomecanica.html">Biomecánica</a>
+        <a href="index.html#leyendas">Leyendas</a>
+        <a href="index.html#records">Records</a>
+      </nav>
+
+    </div>
+
+    <div class="container">
+      <p class="footer__copy">
+        © 2025 RIMSHOT — Proyecto educativo sobre Basketball. Imágenes: Unsplash (licencia libre).
+      </p>
+    </div>
+  </footer>
+  <!-- FIN FOOTER -->
+
+
+  <!-- ====================================================
+       JAVASCRIPT — Toggle del menú móvil (idéntico a index.html)
+       ==================================================== -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
