@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoop Science | Baloncesto y Rendimiento</title>
+    <style>
+        :root {
+            --bg-principal: #0d0d0d;
+            --bg-tarjetas: #1a1a1a;
+            --acento: #ff5722; /* Naranja basketball */
+            --texto: #ffffff;
+            --texto-secundario: #a6a6a6;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-principal);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #262626;
+        }
+
+        h1 {
+            color: var(--acento);
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--texto-secundario);
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+        .contenedor {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background-color: var(--bg-tarjetas);
+            border-radius: 8px;
+            padding: 25px;
+            border: 1px solid #262626;
+            transition: transform 0.2s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            border-color: var(--acento);
+        }
+
+        .tarjeta h3 {
+            margin-top: 0;
+            color: var(--acento);
+            font-size: 1.4rem;
+        }
+
+        .tarjeta p {
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #404040;
+            font-size: 0.85rem;
+            border-top: 1px solid #262626;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Hoop Science</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Domina la Cancha</h2>
+        <p>Análisis técnico, biomecánica del salto vertical y optimización de rendimiento para jugadores de baloncesto.</p>
+    </section>
+
+    <main class="contenedor">
+        <div class="grid">
+            <div class="tarjeta">
+                <h3>01. Biomecánica del Salto</h3>
+                <p>La clave para elevar tu juego está en la triple extensión (tobillos, rodillas y cadera) y el ciclo de estiramiento-acortamiento muscular. Entrena la fuerza explosiva.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>02. Estabilidad & Tracción</h3>
+                <p>Análisis de compuestos de suela en canchas limpias vs. exteriores. El impacto del patrón de espiga en cortes laterales y cambios de ritmo agresivos.</p>
+            </div>
+            <div class="tarjeta">
+                <h3>03. Control y Flujo</h3>
+                <p>Optimización del manejo de balón a través del centro de masa bajo. La física detrás del crossover eficiente.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hoop Science. Creado desde cero.</p>
+    </footer>
+
+</body>
+</html>
